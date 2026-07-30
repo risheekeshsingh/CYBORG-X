@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBORG-X | The Future of Human Evolution</title>
+    <meta name="description" content="Experience the next generation of Artificial Intelligence, Cybernetic Enhancements, and Human-Machine Integration.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Premium Noise Grain Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Aurora Background -->
+    <div class="aurora-bg"></div>
+
+    <!-- Infinite Space Background -->
+    <canvas id="space-background"></canvas>
+
+    <!-- Cinematic Loading Screen -->
+    <div id="loader" class="loader-wrapper cinematic-loader">
+        <div class="loader-content">
+            <div class="holo-logo">CYBORG-<span class="highlight">X</span></div>
+            
+            <div class="boot-sequence" id="boot-text">
+                <!-- Text injected via JS -->
+            </div>
+
+            <div class="loading-progress">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="loader-progress" style="width: 0%"></div>
+                </div>
+                <div class="loading-percentage" id="loader-percentage">0%</div>
+            </div>
+
+            <div class="system-status blink-text">SYSTEM INITIALIZATION IN PROGRESS</div>
+        </div>
+    </div>
+
+    <!-- Animated Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">CYBORG-<span class="highlight">X</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#technology">Technology</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#technology">Technology</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <div class="hero-text reveal">
+                <h1 class="typing-container"><span id="typing-text"></span><span class="cursor-blink">_</span></h1>
+                <p class="subheading fade-up">Experience the next generation of Artificial Intelligence, Cybernetic Enhancements, and Human-Machine Integration.</p>
+                <div class="hero-buttons fade-up" style="animation-delay: 0.3s;">
+                    <a href="#technology" class="btn btn-primary glow-effect">Explore Technology</a>
+                    <a href="#demo" class="btn btn-secondary glass">Watch Demo <i class="fas fa-play"></i></a>
+                </div>
+            </div>
+            <div class="hero-image reveal right">
+                <div id="earth-canvas-container"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#features">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Advanced Technologies</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass reveal fade-up">
+                    <div class="icon-container">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Intelligence</h3>
+                    <p>Advanced machine learning systems capable of real-time decision making and autonomous learning protocols.</p>
+                </div>
+                <div class="feature-card glass reveal fade-up" style="animation-delay: 0.1s;">
+                    <div class="icon-container">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Neural Network Sync</h3>
+                    <p>Direct communication interfaces between the human mind and highly intelligent machine networks.</p>
+                </div>
+                <div class="feature-card glass reveal fade-up" style="animation-delay: 0.2s;">
+                    <div class="icon-container">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Cybernetic Enhancements</h3>
+                    <p>Enhancing human physical and cognitive capabilities through advanced cybernetic technology and bionics.</p>
+                </div>
+                <div class="feature-card glass reveal fade-up" style="animation-delay: 0.3s;">
+                    <div class="icon-container">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Quantum Processing</h3>
+                    <p>Ultra-fast computational systems designed for the future, solving complex problems in milliseconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section id="technology" class="technology section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Powered By Future Technologies</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item glass reveal">Artificial Intelligence</div>
+                <div class="tech-item glass reveal">Machine Learning</div>
+                <div class="tech-item glass reveal">Deep Learning</div>
+                <div class="tech-item glass reveal">Robotics</div>
+                <div class="tech-item glass reveal">Quantum Computing</div>
+                <div class="tech-item glass reveal">Computer Vision</div>
+                <div class="tech-item glass reveal">Neural Interfaces</div>
+                <div class="tech-item glass reveal">Blockchain Security</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Live Systems Dashboard</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="dashboard-grid">
+                
+                <div class="widget glass reveal fade-up">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-brain"></i>
+                            <h4>AI Processing Status</h4>
+                        </div>
+                        <span class="widget-value" id="val-ai">87%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-ai" style="width: 87%; background: linear-gradient(90deg, var(--primary), var(--accent));"></div>
+                    </div>
+                </div>
+
+                <div class="widget glass reveal fade-up" style="animation-delay: 0.1s;">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-network-wired"></i>
+                            <h4>Neural Connections</h4>
+                        </div>
+                        <span class="widget-value" id="val-neural">92%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-neural" style="width: 92%; background: linear-gradient(90deg, var(--secondary), var(--primary));"></div>
+                    </div>
+                </div>
+
+                <div class="widget glass reveal fade-up" style="animation-delay: 0.2s;">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-microchip"></i>
+                            <h4>CPU Usage</h4>
+                        </div>
+                        <span class="widget-value" id="val-cpu">45%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-cpu" style="width: 45%; background: linear-gradient(90deg, #10B981, #059669); box-shadow: 0 0 15px #10B981;"></div>
+                    </div>
+                </div>
+
+                <div class="widget glass reveal fade-up" style="animation-delay: 0.3s;">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-atom"></i>
+                            <h4>Quantum Power</h4>
+                        </div>
+                        <span class="widget-value" id="val-quantum">99%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-quantum" style="width: 99%; background: linear-gradient(90deg, var(--accent), var(--secondary)); box-shadow: 0 0 15px var(--accent);"></div>
+                    </div>
+                </div>
+
+                <div class="widget glass reveal fade-up" style="animation-delay: 0.4s;">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-robot"></i>
+                            <h4>Active Robots</h4>
+                        </div>
+                        <span class="widget-value" id="val-robots">8,402</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-robots" style="width: 84%; background: linear-gradient(90deg, #F59E0B, #D97706); box-shadow: 0 0 15px #F59E0B;"></div>
+                    </div>
+                </div>
+
+                <div class="widget glass reveal fade-up" style="animation-delay: 0.5s;">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Network Security</h4>
+                        </div>
+                        <span class="widget-value" id="val-security">100%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="bar-security" style="width: 100%; background: linear-gradient(90deg, #3B82F6, #00F5FF); box-shadow: 0 0 15px #00F5FF;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Reactor Section -->
+    <section id="reactor" class="reactor-section section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Quantum Energy Reactor</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="reactor-container reveal fade-up">
+                <div class="reactor-core" id="reactor-core">
+                    <div class="reactor-ring ring-1"></div>
+                    <div class="reactor-ring ring-2"></div>
+                    <div class="reactor-ring ring-3"></div>
+                    <div class="reactor-center">
+                        <div class="energy-orb"></div>
+                        <span class="energy-level" id="energy-level">99.9%</span>
+                    </div>
+                    <div class="reactor-particles" id="reactor-particles"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Center Section -->
+    <section id="security" class="security-section section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Cyber Security Center</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="security-grid">
+                <!-- Visual Shield/Firewall -->
+                <div class="security-visual glass reveal fade-up">
+                    <div class="shield-container">
+                        <div class="firewall-rings">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="shield-outer">
+                            <div class="scanner-beam"></div>
+                        </div>
+                        <div class="shield-inner">
+                            <i class="fas fa-shield-alt shield-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Dashboard -->
+                <div class="security-dashboard glass reveal fade-up" style="animation-delay: 0.2s;">
+                    <div class="security-header">
+                        <h3><i class="fas fa-lock"></i> Network Defense</h3>
+                        <div class="security-status"><span class="pulse-green"></span> ACTIVE</div>
+                    </div>
+                    
+                    <div class="security-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Threats Eliminated</span>
+                            <span class="stat-value text-red" id="threat-counter">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Firewall Integrity</span>
+                            <span class="stat-value text-primary" id="firewall-integrity">100%</span>
+                        </div>
+                    </div>
+
+                    <div class="threat-log-container">
+                        <div class="threat-log-header">LIVE TRAFFIC LOG</div>
+                        <div class="threat-log" id="threat-log">
+                            <div class="log-entry">> Initializing deep packet defense... [OK]</div>
+                            <div class="log-entry">> Global firewall integrity verified.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Map Section -->
+    <section id="global-network" class="world-map-section section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Global AI Network</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="map-container glass reveal fade-up">
+                <div id="world-map-canvas"></div>
+                <div class="map-overlay-ui">
+                    <div class="map-status">
+                        <span class="pulse-green"></span>
+                        <span>SATELLITE UPLINK ACTIVE</span>
+                    </div>
+                    <div class="map-stats">
+                        <div class="m-stat"><span>Active Hubs:</span> <span class="m-val text-primary">142</span></div>
+                        <div class="m-stat"><span>Data Transfer:</span> <span class="m-val text-secondary">8.4 PB/s</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>About Cyborg-X</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal left">
+                    <div class="image-wrapper glass">
+                        <!-- Live Animated Neural Network Canvas -->
+                        <canvas id="neural-canvas"></canvas>
+                        <div id="neural-tooltip" class="neural-tooltip glass" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="about-text reveal right">
+                    <h3>Transforming the Human Experience</h3>
+                    <p>At Cyborg-X, we believe in a symbiotic relationship between humans and machines. Our mission is to seamlessly integrate artificial intelligence and cybernetic systems to transform healthcare, education, industries, and daily life.</p>
+                    <div class="mission-vision">
+                        <div class="mv-item">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Mission</h4>
+                                <p>To elevate human potential through accessible cybernetics.</p>
+                            </div>
+                        </div>
+                        <div class="mv-item">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h4>Vision</h4>
+                                <p>A future where biological limitations are a thing of the past.</p>
+                            </div>
+                        </div>
+                        <div class="mv-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h4>Innovation Goals</h4>
+                                <p>Continuous research in neural interfaces and quantum AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Brain Section -->
+    <section id="ai-brain" class="ai-brain section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Quantum AI Brain</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="brain-container glass reveal fade-up">
+                <div id="brain-canvas-wrapper"></div>
+                <div class="brain-overlay-ui">
+                    <div class="processing-status">
+                        <span class="status-dot"></span>
+                        <span>NEURAL PROCESSING ACTIVE</span>
+                    </div>
+                    <div class="data-stream" id="data-stream">
+                        <!-- Text injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Evolution Timeline</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>2025</h3>
+                        <h4>Artificial Intelligence Revolution</h4>
+                        <p>Massive leaps in generative models and autonomous systems redefine industries globally.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>2030</h3>
+                        <h4>Human-AI Collaboration</h4>
+                        <p>AI becomes a ubiquitous partner in daily tasks, seamlessly augmenting human capabilities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>2035</h3>
+                        <h4>Cybernetic Enhancements</h4>
+                        <p>Commercial availability of non-invasive cybernetic prosthetics and cognitive boosters.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>2040</h3>
+                        <h4>Neural Interface Adoption</h4>
+                        <p>Direct brain-to-machine communication becomes the standard for interacting with technology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>2045</h3>
+                        <h4>Human-Machine Integration</h4>
+                        <p>The singularity point where biological and artificial intelligence form a unified consciousness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics section-padding">
+        <div class="cyber-grid-bg"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item glass reveal fade-up">
+                    <h3 class="counter" data-target="99">0</h3><span class="suffix">%</span>
+                    <p>AI Accuracy</p>
+                </div>
+                <div class="stat-item glass reveal fade-up" style="animation-delay: 0.1s;">
+                    <h3 class="counter" data-target="50">0</h3><span class="suffix">M+</span>
+                    <p>Connected Devices</p>
+                </div>
+                <div class="stat-item glass reveal fade-up" style="animation-delay: 0.2s;">
+                    <h3 class="counter" data-target="100">0</h3><span class="suffix">+</span>
+                    <p>Research Labs</p>
+                </div>
+                <div class="stat-item glass reveal fade-up" style="animation-delay: 0.3s;">
+                    <h3 class="counter-text">24/7</h3>
+                    <p>Neural Connectivity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>What Experts Say</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card glass reveal fade-up">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="review">"Cyborg-X has completely redefined the boundaries between human cognition and quantum computing. Their neural interfaces are decades ahead of the competition."</p>
+                    <div class="profile">
+                        <div class="avatar" style="background: linear-gradient(135deg, var(--primary), var(--secondary));"></div>
+                        <div class="info">
+                            <h4>Dr. Elena Rostova</h4>
+                            <p>Chief AI Scientist | NeuroTech Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass reveal fade-up" style="animation-delay: 0.1s;">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="review">"The seamless integration of their cybernetic enhancements into our healthcare protocols has increased patient recovery rates by unprecedented margins."</p>
+                    <div class="profile">
+                        <div class="avatar" style="background: linear-gradient(135deg, var(--secondary), var(--accent));"></div>
+                        <div class="info">
+                            <h4>Marcus Chen</h4>
+                            <p>Director of Bionics | Global Health</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass reveal fade-up" style="animation-delay: 0.2s;">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="review">"I am genuinely astounded by the real-time processing capabilities of Cyborg-X's AI systems. It feels like interacting with a sentient being."</p>
+                    <div class="profile">
+                        <div class="avatar" style="background: linear-gradient(135deg, var(--accent), var(--primary));"></div>
+                        <div class="info">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Lead Engineer | Future Robotics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Join The Future</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-container glass reveal">
+                <form id="contactForm" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Name</label>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required placeholder=" " rows="5"></textarea>
+                        <label for="message">Message</label>
+                        <div class="input-glow"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary glow-effect w-100">Connect Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>CYBORG-<span class="highlight">X</span></h2>
+                    <p>Pioneering the next stage of human evolution through advanced cybernetics and artificial intelligence.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CYBORG-X. All Rights Reserved. | Designed for the Future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggler">
+            <div class="holo-avatar-btn"></div>
+            <i class="fas fa-comment-dots"></i>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="chatbot-window glass">
+            <div class="chatbot-header">
+                <div class="holo-avatar-small"></div>
+                <div class="header-info">
+                    <h4>CYBORG-AI</h4>
+                    <p><span class="online-dot"></span> Online</p>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message ai">
+                    <div class="msg-content">Hello! I am CYBORG-AI. How can I assist you with the future of human evolution today?</div>
+                </div>
+                <!-- Typing indicator hidden by default -->
+                <div class="message ai typing-indicator" id="typing-indicator" style="display: none;">
+                    <div class="msg-content">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-suggestions">
+                <button class="suggestion-btn">What is Neural Sync?</button>
+                <button class="suggestion-btn">Explore Timeline</button>
+            </div>
+            <div class="chatbot-input">
+                <button id="voice-btn" title="Click to speak"><i class="fas fa-microphone"></i></button>
+                <input type="text" id="chat-input" placeholder="Initiate sequence..." autocomplete="off">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Three.js and OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
